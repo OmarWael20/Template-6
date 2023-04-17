@@ -1,0 +1,235 @@
+:root {
+  --main-font: 'Poppins', sans-serif;
+  --dark:#121212;
+  --light:#fff;
+}
+
+/* Start Consts */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.6s;
+}
+
+.dark-theme {
+  --dark: #fff;
+  --light: #121212;
+}
+
+body {
+  font-family: var(--main-font);
+  background-color: var(--light);
+  transition: 0.6s;
+}
+
+a {
+  text-decoration: none;
+  color:var(--dark) ;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End Consts */
+/* Start Header */
+
+header {
+  padding-top: 10px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#open-menu {
+  color:var(--dark);
+}
+
+#close-menu {
+  display: none;
+  color:var(--dark);
+}
+
+#night-button {
+  display: none;
+  color:var(--dark);
+}
+
+#light-button {
+  color: var(--white);
+}
+
+@media (min-width:768px) {
+  header .container nav .menu-toggle {
+    display: none;
+  }
+}
+
+@media (max-width:767px) {
+}
+
+header .container a.logo {
+  color:var(--dark);
+  font-size: 22px;
+  font-weight: bold;
+}
+
+header .container nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+header .container nav ul {
+  display: flex;
+  padding-right: 7px;
+  padding-left: 7px;
+}
+
+header .container nav ul li {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+header .container nav ul li a {
+  padding: 5px 12px;
+  border-radius: 30px;
+  color: var(--dark);
+}
+
+header .container nav ul li a:hover {
+  color: var(--light);
+  background-color: var(--dark);
+}
+
+@media (max-width:767px) {
+  header .container nav #night-button ,
+  header .container nav #light-button 
+  {
+    margin-left: 11px;
+  }
+  
+  header .container nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: calc(100% + 20px);
+    right: 0;
+    width: 340px;
+    text-align: center;
+    background-color: #000;
+    opacity: 85%;
+    padding: 20px;
+  }
+  
+  header .container nav ul li a {
+    color: #fff;
+  }
+  
+  header .container nav ul li {
+    padding-bottom: 10px;
+    width: 100%;
+  }
+  header .container nav ul li:nth-child(3) {
+    padding-bottom: 0;
+  }
+}
+
+/* End Header */
+/* Start Landing */
+
+.landing {
+  padding-top: 35px;
+}
+
+.landing p , .landing h3 ,.landing h6 
+{
+  color: var(--dark);
+}
+
+.landing-text p {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  margin-top: 7px;
+}
+
+.landing-text h3 {
+  font-size: 35px;
+}
+
+.landing-text h6 {
+  font-size: 24px;
+  margin-top: -6px;
+}
+
+
+.landing .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.landing .landing-img img {
+  width: 260px;
+}
+
+.landing .landing-text {
+  width:400px;
+}
+
+@media (max-width:767px) {
+  .landing .container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .landing-text {
+    max-width: 100%;
+  }
+  
+  .landing-text h3 {
+    font-size: 28px;
+  }
+  
+  .landing-text p {
+    font-size: 13px;
+  }
+  
+  .landing-text h6 {
+    font-size: 20px;
+  }
+}
+
+/* End Landing */
